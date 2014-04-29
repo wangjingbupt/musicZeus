@@ -1,0 +1,46 @@
+<div class="list-page">
+<?php if($page == 1 ) {?>
+	<div class="i-list"> <span><<</span><?php foreach($pages as $p){ ?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><a href="/?a=dashboard&page=<?=($page+1)?>&<?=$param?>">>></a></div><div class="clear"></div>
+<?php } else if($page >= $total) {?>
+	<div class="i-list"><a href="/?a=dashboard&page=<?=($page-1)?>&<?=$param?>"><<</a><?php foreach($pages as $p){ ?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><span>>></span></div>
+	<div class="clear"></div>
+<?php }else{?>
+	<div class="i-list"> <a href="/?a=dashboard&page=<?=($page-1)?>&<?=$param?>"><<</a><?php foreach($pages as $p){?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><a href="/?a=dashboard&page=<?=($page+1)?>&<?=$param?>">>></a></div>
+	<div class="clear"></div>
+<?php } ?>
+</div>
+<div class="panel">
+<div>
+<table class="table table_bordered" style='word-break:break-all;word-wrap:break-word;line-height:35px;'>
+<thead>
+<tr>
+<th>LogId</th><th>Cuid</th><th>调用方法</th><th>访问时间</th><th style='max-width:60px;'>响应时间(ms)</th><th>调用环境</th><th>来源IP</th>
+</tr>
+</thead>
+<tbody>
+<?php 
+foreach($logs as $log){ ?>
+	<?php if($c++%2 == 1) { ?>
+		<tr style='background-color:#eeeeee;'>	
+			<?php } else {?>
+				<tr>
+					<?php } ?>
+					<td style='min-width:100px;'><a href="/?a=detail&logid=<?=$log['log_id']?>" target='_blank'><?= $log['log_id'] ?></a></td><td style='max-width:150px;'><?= $log['cuid'] ?></td><td style='max-width:100px;'><?= $log['method'] ?></td></td><td style='max-width:70px;'><?= $log['time'] ?></td><td style='max-width:20px;'><?= $log['cost'] ?></td><td><?= $log['source'] ?></td><td style='max-width:50px;'><?= $log['ip'] ?></td>
+					</tr>
+					<?php }?>
+
+					</tbody>
+					</table>
+					</div>
+					</div>
+<div class="list-page">
+<?php if($page == 1 ) {?>
+	<div class="i-list"> <span><<</span><?php foreach($pages as $p){ ?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><a href="/?a=dashboard&page=<?=($page+1)?>&<?=$param?>">>></a></div><div class="clear"></div>
+<?php } else if($page >= $total) {?>
+	<div class="i-list"><a href="/?a=dashboard&page=<?=($page-1)?>&<?=$param?>"><<</a><?php foreach($pages as $p){ ?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><span>>></span></div>
+	<div class="clear"></div>
+<?php }else{?>
+	<div class="i-list"> <a href="/?a=dashboard&page=<?=($page-1)?>&<?=$param?>"><<</a><?php foreach($pages as $p){?><?php if($p == $page) {?><span class="active"><?=$p?></span><?php } else {?><a href="/?a=dashboard&page=<?=$p?>&<?=$param?>"><?=$p?></a><?php } ?><?php } ?><a href="/?a=dashboard&page=<?=($page+1)?>&<?=$param?>">>></a></div>
+	<div class="clear"></div>
+<?php } ?>
+</div>

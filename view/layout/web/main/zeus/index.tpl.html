@@ -1,0 +1,30 @@
+<div style='margin: 20px 30px;'>
+<form target='dashboard' method='POST' name='zeusform' action='/?a=dashboard'>
+<p>
+CUID：<input type="text" name="cuid" id="cuid" class="input-large" size="20"> &nbsp;&nbsp;
+method：<input type="text" name="method" id="method" class="input-large" size="30"> &nbsp;&nbsp;
+
+IP：<input type="text" name="ip" id="ip" class="input-large" size="16">
+时&nbsp; 间：<input type="text" name="timestart" id="timestart" class="input-large" size="22"> - <input type="text" name="timeend" id="timeend" class="input-large" size="22"> &nbsp;&nbsp;
+来源：<select name="source" id="source" class="select-large">
+<option value="">请选择</option>
+<?php 
+	foreach($source as $s)
+	{
+		?>
+		<option value="<?= $s?>"><?=$s?></option>
+
+		<?php
+
+	}
+
+?>
+</select>
+</p>
+<p style='margin:15px 0 ;'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onClick="zeusform.submit();" class="btn btn-primary btn-large">提交</a> <a  onclick="window.location.reload();" class="btn btn-danger btn-large">清空参数</a>
+</p>
+</form>
+<iframe name='dashboard' src='/?a=dashboard' width='100%' height='2200'  frameborder="no" border="0" scrolling="no">
+</iframe>
+</div>

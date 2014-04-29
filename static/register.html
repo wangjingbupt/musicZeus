@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页-浅绿风格demo页</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<link rel="StyleSheet" href="js/model/xdialog/xDialog.css" type="text/css" />
+<script type="text/javascript" src="js/model/xdialog/xDialog.js"></script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+    <div class="h_logo"><a href="#" title="业务监控平台"><img src="images/qaup_logo.png" alt=""/></a></div>
+    <div class="h-menu">
+        <ul class="h-nav">
+            <li><a href="#">首页</a><span></span></li>
+            <li class="active"><a href="#">服务使用</a><span></span></li>
+            <li><a href="#">我的系统</a><span></span></li>
+            <li><a href="#">我的流程</a><span></span></li>
+            <li>
+                <div class="btn-dropdown drop-heigth">
+                    <a class="btn dropdown-nav">拓扑管理 <i class="select-open"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="h-extra"> 
+        <div class="search">
+            <div class="page-search">
+                <input type="text" class="input-noborder" placeholder="看看ELK有什么..." value="" size="30">
+                <input type="button" >
+            </div>
+        </div>
+        <div class="btn-dropdown drop-heigth">
+            <a class="btn dropdown-extra"><span class="select-txt">张三</span> <span class="select-open"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--content-->
+<div class="layout-content">
+    <div class="left-reg">
+        <div class="page-title"> 我管理的系统 </div>
+        <div class="form pd10">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                    <td width="20%" align="right"><b class="requier">*</b>名称：</td>
+                    <td width="80%"  align="left"><input type="text" name="textfield" id="textfield" class="input-large" size="50"/></td>
+                </tr>
+                <tr>
+                    <td align="right"><b class="requier">*</b>域名：</td>
+                    <td align="left"><input type="text" name="textfield2" id="textfield2"  class="input-large" size="50" placeholder="例如：icafe.baidu.com" /></td>
+                </tr>
+                <tr>
+                    <td align="right"><b class="requier">*</b>标识：</td>
+                    <td align="left"><input type="text" name="textfield3" id="textfield3"   class="input-large alert-hint" size="50"/><b class="requier">必填项</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <b class="alert-text">提示：</b><span>系统唯一，字母或者数字，有效长度1~255</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><b class="requier">*</b>管理员：</td>
+                    <td align="left"><input type="text" name="textfield3" id="textfield4"   class="input-large" size="50" /></td>
+                </tr>
+                <tr>
+                    <td align="right">描述：</td>
+                    <td align="left"><textarea></textarea></td>
+                </tr>                
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  <td align="left"><a class="btn btn-primary btn-large">确认</a> <a class="btn btn-primary btn-large">确认并注册服务</a> <a class="btn  btn-large">取消</a> </td>
+                </tr>
+              </table>
+         </div>
+    </div>
+        
+    <div class="right-reg pd0x10">
+        <h3>部门已注册系统</h3>
+        <table class="table table-bordered table-condensed mb20">
+            <thead>  
+                <tr>
+                    <th width="20%">名称</th>
+                    <th width="30%">域名</th>
+                    <th width="25%">系统描述</th>
+                    <th width="25%">创建日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>monitor业务监控平台</td>
+                    <td>http://monitor.baidu.com:8088/pub/index</td>
+                    <td>系统描述...</td>
+                    <td>2014-02-23</td>
+                </tr>
+                <tr>
+                    <td>iCafe</td>
+                    <td>http://icafe.baidu.com:8000/icafe</td>
+                    <td>系统描述...</td>
+                    <td>2014-02-23</td>
+                </tr>    
+                <tr>
+                    <td>iCafe+</td>
+                    <td>http://icafe.baidu.com</td>
+                    <td>系统描述...</td>
+                    <td>2014-02-23</td>
+                </tr>                        
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="layout-footer">&copy; 2013-2014 Baidu.com 百度公司版权所有</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

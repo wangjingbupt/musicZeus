@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页-浅绿风格demo页</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<link rel="StyleSheet" href="js/model/dtree/dtree.css" type="text/css" />
+<script type="text/javascript" src="js/model/dtree/dtree.js"></script>
+<link rel="StyleSheet" href="js/model/xdialog/xDialog.css" type="text/css" />
+<script type="text/javascript" src="js/model/xdialog/xDialog.js"></script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+    <div class="h_logo"><a href="#" title="业务监控平台"><img src="images/qaup_logo.png" alt=""/></a></div>
+    <div class="h-menu">
+        <ul class="h-nav">
+            <li><a href="#">首页</a><span></span></li>
+            <li class="active"><a href="#">服务使用</a><span></span></li>
+            <li><a href="#">我的系统</a><span></span></li>
+            <li><a href="#">我的流程</a><span></span></li>
+            <li>
+                <div class="btn-dropdown drop-heigth">
+                    <a class="btn dropdown-nav">拓扑管理 <i class="select-open"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="h-extra"> 
+        <div class="search">
+            <div class="page-search">
+                <input type="text" class="input-noborder" placeholder="看看ELK有什么..." value="" size="30">
+                <input type="button" >
+            </div>
+        </div>
+        <div class="btn-dropdown drop-heigth">
+            <a class="btn dropdown-extra"><span class="select-txt">张三</span> <span class="select-open"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--content-->
+<div class="layout-content">
+    <div class="left-tree">
+        <div class="dtree">
+
+            <!--p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a></p-->
+
+            <script type="text/javascript">
+                    <!--
+
+                    d = new dTree('d');
+
+                    d.add(0,-1,'My example tree');
+                    d.add(1,0,'Node 1','#');
+                    d.add(2,0,'Node 2','#');
+                    d.add(3,1,'Node 1.1','#');
+                    d.add(4,0,'Node 3','#');
+                    d.add(5,3,'Node 1.1.1','#');
+                    d.add(6,5,'Node 1.1.1.1','#');
+                    d.add(7,0,'Node 4','#');
+                    d.add(8,1,'Node 1.2','#');
+                    d.add(9,0,'My Pictures','#','Pictures I\'ve taken over the years','','','images/img/imgfolder.gif');
+                    d.add(10,9,'The trip to Iceland','#','Pictures of Gullfoss and Geysir');
+                    d.add(11,9,'Mom\'s birthday','#');
+                    d.add(12,0,'Recycle Bin','#','','','images/img/trash.gif');
+
+                    document.write(d);
+
+                    //-->
+            </script>
+
+        </div>
+    </div>        
+    <div class="right-tree pd0x10">
+        
+        <div class="panel-tab">
+            <ul>
+                <li class="active" id="a1" onclick="setTab('a',1,2)">详情</li>
+                <li id="a2" onclick="setTab('a',2,2)">上下游系统</li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="panel-main mt20">
+            <div id="con_a_1" class="hover">
+                <div class="panel panel-gray pd0x10">
+                    <h3>系统信息</h3>
+                    <table class="table table-noborder table-condensed">
+                        <tr><td width="80px" align="right">名称：</td><td>uic</td></tr>
+                        <tr><td width="80px" align="right">接口人：</td><td>张骏</td></tr>
+                        <tr><td width="80px" align="right">地址：</td><td>百度大厦</td></tr>
+                        <tr><td width="80px" align="right">注册日期：</td><td>2013-11-03 12:09:00</td></tr>
+                        <tr><td colspan="2"><a class="btn btn-primary" id="x4">点击显示弹出框</a></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div id="con_a_2" style="display:none;">内容二</div>
+        </div>
+        
+        <div class="page-title mt20"> 所含服务 <a class="btn btn-primary fr">添加服务</a></div>
+        <div class="panel mt10 mb20">
+            <div>
+                <table class="table table_bordered">
+                    <thead>
+                        <tr>
+                            <th width="30">序号</th>
+                            <th width="60">代码</th>
+                            <th width="90">简称</th>
+                            <th>店名</th>
+                            <th width="90" >所属省份</th>
+                            <th width="120">创建时间</th>
+                            <th width="120" style="padding-left:15px;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ZT01</td>
+                            <td>北京城市展厅</td>
+                            <td class="title"><a href="#">北京美好城市推广展示大厅</a></td>
+                            <td>北京市</td>
+                            <td>2013-07-02 11:41</td>
+                            <td class="i-operate"><a href="#" title="查看">查看</a><a href="#" title="编辑">编辑</a><a href="#" title="删除">删除</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>2</td>
+                            <td>ZT01</td>
+                            <td>北京城市展厅</td>
+                            <td class="title"><a href="#">北京美好城市推广展示大厅</a></td>
+                            <td>北京市</td>
+                            <td>2013-07-02 11:41</td>
+                            <td class="i-operate"><a href="#" title="查看">查看</a><a href="#" title="编辑">编辑</a><a href="#" title="删除">删除</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>3</td>
+                            <td>ZT01</td>
+                            <td>北京城市展厅</td>
+                            <td class="title"><a href="#">北京美好城市推广展示大厅</a></td>
+                            <td>北京市</td>
+                            <td>2013-07-02 11:41</td>
+                            <td class="i-operate"><a href="#" title="查看">查看</a><a href="#" title="编辑">编辑</a><a href="#" title="删除">删除</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>4</td>
+                            <td>ZT01</td>
+                            <td>北京城市展厅</td>
+                            <td class="title"><a href="#">北京美好城市推广展示大厅</a></td>
+                            <td>北京市</td>
+                            <td>2013-07-02 11:41</td>
+                            <td class="i-operate"><a href="#" title="查看">查看</a><a href="#" title="编辑">编辑</a><a href="#" title="删除">删除</a></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="layout-footer">&copy; 2013-2014 Baidu.com 百度公司版权所有</div>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#x4').click(function(){
+                $.xDialog({
+                        title:'查看详情', 
+                        content:'<table class="table table-noborder table-condensed"><tr><td width="80px" align="right">名称：</td><td>uic</td></tr><tr><td width="80px" align="right">接口人：</td><td>张骏</td></tr><tr><td width="80px" align="right">地址：</td><td>百度大厦</td></tr><tr><td width="80px" align="right">注册日期：</td><td>2013-11-03 12:09:00</td></tr></table>',
+                        ok:function(){
+                                alert("ok");
+                        },
+                        cancel:function(){
+                                alert("cancel");
+                        }
+                });
+        });
+    });
+</script>
+</body>
+</html>

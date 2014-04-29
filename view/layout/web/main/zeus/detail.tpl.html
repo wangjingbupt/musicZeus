@@ -1,0 +1,41 @@
+<div class="panel" style="margin:20px 30px;">
+<div>
+<table class="table table_bordered" style='word-break:break-all;word-wrap:break-word;line-height:35px;'>
+<thead>
+<tr>
+<th>LogId</th><th>Cuid</th><th>调用方法</th><th>访问时间</th><th style='max-width:60px;'>响应时间(ms)</th><th>调用环境</th><th>来源IP</th>
+</tr>
+</thead>
+<tbody>
+				<tr>
+					<td style='min-width:100px;'><a href="/?a=detail&logid=<?=$log['log_id']?>" target='_blank'><?= $log['log_id'] ?></a></td><td style='max-width:150px;'><?= $log['cuid'] ?></td><td style='max-width:100px;'><?= $log['method'] ?></td></td><td style='max-width:70px;'><?= $log['time'] ?></td><td style='max-width:20px;'><?= $log['cost'] ?></td><td><?= $log['source'] ?></td><td style='max-width:50px;'><?= $log['ip'] ?></td>
+					</tr>
+<tr style='background-color:#eeeeee;'>
+<td>url</td><td colspan=6>
+<div><pre><?=$url?></pre></div>
+</td>
+</tr>
+<tr>
+<td>日志内容</td>
+<td colspan=6>
+	<?php foreach($logs as $vlog){?>
+		<div style='margin:10px 0;border-bottom:1px solid #eeeeee;'>
+		<?php if($vlog['log_type'] == 'wf'){?>
+			<span style='color:#c0392b;'><?=$vlog['log_data']?></span>
+			<?php } else{?>
+			<span><?=$vlog['log_data']?></span>
+			<?php }?>
+		</div>
+	<?php }?>
+
+ </td>
+</tr>
+<tr>
+<td>返回内容</td><td colspan=6>
+	<div><?=$return_data?></div>
+</td>
+</tr>
+					</tbody>
+					</table>
+					</div>
+					</div>
